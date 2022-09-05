@@ -1,0 +1,17 @@
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+	.modal {
+		height: 100%;
+		width: 100vw;
+	}
+}
