@@ -3,7 +3,9 @@ import styles from './Participant.module.css';
 import audioDisabled from '../../../static/images/audioDisabled.svg';
 import call from '../../../static/images/call.svg';
 import pin from '../../../static/images/pin.svg';
+import thumbtack from '../../../static/images/thumbtack.svg';
 
+// Takes in type of props as IParticipant
 const Participant = ({ image, status, name }: any) => {
 	return (
 		<div className={styles.participant}>
@@ -22,8 +24,8 @@ const Participant = ({ image, status, name }: any) => {
 			<div className={styles.participantControls}>
 				{
 					<img
-						className={styles.icon}
-						src={pin}
+						className={`${styles.icon} ${styles.pinIcon}`}
+						src={thumbtack}
 						alt='Pin Icon'
 						width='16px'
 					/>

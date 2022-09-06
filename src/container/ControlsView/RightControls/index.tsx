@@ -6,7 +6,7 @@ import heart from '../../../static/images/heart.svg';
 import more from '../../../static/images/more.svg';
 import shareScreen from '../../../static/images/shareScreen.svg';
 
-const RightControls = () => {
+const RightControls = ({ onClickMore }: { onClickMore: () => void }) => {
 	return (
 		<div className={styles.rightControlsContainer}>
 			<button className={`${styles.control} ${styles.chat}`}>
@@ -43,11 +43,13 @@ const RightControls = () => {
 				</div>
 				<span>React</span>
 			</button>
-			<button className={`${styles.control} ${styles.more}`}>
+			<button
+				onClick={onClickMore}
+				className={`${styles.control} ${styles.more}`}
+			>
 				<div className={styles.icon}>
 					<img src={more} alt='Three Dotted Icon' width='18px' />
 				</div>
-
 				<span>More</span>
 			</button>
 		</div>

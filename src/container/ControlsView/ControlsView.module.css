@@ -8,8 +8,79 @@
 }
 
 .controlsContainer {
+	position: relative;
 	padding: 12px 18px 16px 18px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.moreOptions {
+	background-color: #0a0a0a;
+	position: absolute;
+	bottom: 100%;
+	right: 5px;
+	border-radius: 4px 4px 2px 2px;
+	padding: 6px 1px;
+	width: 250px;
+}
+
+.option {
+	color: #d5d9de;
+	font-size: 15px;
+	font-weight: 400;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 6px 16px;
+}
+
+.option:hover {
+	background-color: rgba(10, 10, 10, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.invite {
+	display: none;
+}
+
+.participants {
+	display: none;
+}
+
+.shareScreen {
+	display: none;
+}
+
+.handRaise {
+	display: none;
+}
+
+.react {
+	display: none;
+}
+
+@media screen and (max-width: 1000px) {
+	.invite {
+		display: flex;
+	}
+
+	.shareScreen {
+		display: flex;
+	}
+
+	.handRaise {
+		display: flex;
+	}
+
+	.react {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.participants {
+		display: flex;
+	}
 }

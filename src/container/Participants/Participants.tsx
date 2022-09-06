@@ -5,6 +5,7 @@ import close from '../../static/images/close.svg';
 import shareLink from '../../static/images/shareLink.svg';
 import Participant from './Participant/Participant';
 
+// Takes in type of props as IParticipants
 const Participants = ({
 	totalParticipants,
 	activeParticipants,
