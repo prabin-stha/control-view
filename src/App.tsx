@@ -3,8 +3,11 @@ import { useState } from 'react';
 import { Modal } from './components';
 import { ControlsView, Participants } from './container';
 
+import styles from './App.module.css';
+
 function App() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const [showMoreOptions, setShowMoreOptions] = useState(false);
 
 	const onCloseClickHandler = () => {
 		setModalIsOpen(false);
@@ -14,15 +17,28 @@ function App() {
 		setModalIsOpen(true);
 	};
 
+	const onMoreClickHandler = () => {
+		setShowMoreOptions(state => !state);
+	};
+
 	return (
-		<div className='App'>
+		<div
+			className='App'
+			onClick={() => {
+				showMoreOptions && setShowMoreOptions(false);
+			}}
+		>
 			{modalIsOpen && (
 				<Modal onOverlayClick={onCloseClickHandler}>
 					<Participants onCloseClickHandler={onCloseClickHandler} />
 				</Modal>
 			)}
-			<main>
-				<ControlsView onOpenClickHandler={onOpenClickHandler} />
+			<main className={styles.fill}>
+				<ControlsView
+					showMoreOptions={showMoreOptions}
+					onMoreOptionsClickHandler={onMoreClickHandler}
+					onOpenClickHandler={onOpenClickHandler}
+				/>
 			</main>
 		</div>
 	);

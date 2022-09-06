@@ -14,15 +14,13 @@ import shareScreen from '../../static/images/shareScreen.svg';
 
 const ControlsView = ({
 	onOpenClickHandler,
+	onMoreOptionsClickHandler,
+	showMoreOptions,
 }: {
 	onOpenClickHandler: () => void;
+	onMoreOptionsClickHandler: () => void;
+	showMoreOptions: boolean;
 }) => {
-	const [showMoreOptions, setShowMoreOptions] = useState(false);
-
-	const onMoreClickHandler = () => {
-		setShowMoreOptions(state => !state);
-	};
-
 	return (
 		<section className={styles.controlsView}>
 			<div className={styles.controlsContainer}>
@@ -90,7 +88,7 @@ const ControlsView = ({
 				)}
 				<LeftControls onOpenClickHandler={onOpenClickHandler} />
 				<CenterControls />
-				<RightControls onClickMore={onMoreClickHandler} />
+				<RightControls onClickMore={onMoreOptionsClickHandler} />
 			</div>
 		</section>
 	);
