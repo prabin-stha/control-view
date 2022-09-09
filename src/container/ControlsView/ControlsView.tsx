@@ -22,7 +22,7 @@ const ControlsView = ({
 	showMoreOptions: boolean;
 }) => {
 	return (
-		<section className={styles.controlsView}>
+		<section className={`unselectable ${styles.controlsView}`}>
 			<div className={styles.controlsContainer}>
 				{showMoreOptions && (
 					<div className={styles.moreOptions}>

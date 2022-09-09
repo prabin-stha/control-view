@@ -1,4 +1,11 @@
-.fill {
-	background-color: bisque;
+.main {
+	background-color: #1f1f1f;
 	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1700px;
+	height: 100%;
+	margin: 0 auto;
 }

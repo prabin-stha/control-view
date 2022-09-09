@@ -1,2 +1,3 @@
 export { ControlsView } from './ControlsView/ControlsView';
-export { Participants } from './Participants/Participants';
+export { ParticipantsModal } from './ParticipantsModal/ParticipantsModal';
+export { ParticipantsView } from './ParticipantsView/ParticipantsView';

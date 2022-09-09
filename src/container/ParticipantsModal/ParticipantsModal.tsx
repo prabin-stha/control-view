@@ -1,4 +1,4 @@
-import styles from './Participants.module.css';
+import styles from './ParticipantsModal.module.css';
 
 import addPerson from '../../static/images/addPerson.svg';
 import close from '../../static/images/close.svg';
@@ -6,7 +6,7 @@ import shareLink from '../../static/images/shareLink.svg';
 import Participant from './Participant/Participant';
 
 // Takes in type of props as IParticipants
-const Participants = ({
+const ParticipantsModal = ({
 	totalParticipants,
 	activeParticipants,
 	participants,
@@ -48,4 +48,4 @@ const Participants = ({
 	);
 };
 
-export { Participants };
+export { ParticipantsModal };
